@@ -39,53 +39,66 @@
             box-shadow: 0 0 50px rgba(0, 255, 255, 0.9);
             margin-top: 30px;
             text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
         }
         h1, h2 {
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #0ff;
             text-shadow: 0 0 15px rgba(0, 255, 255, 1);
-            transition: transform 0.3s ease-in-out;
         }
-        h2:hover {
-            transform: scale(1.05);
+        
+        /* Carousel Styling */
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: 40px auto;
+            overflow: hidden;
         }
-        .references-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            padding: 20px;
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
-        .reference-item {
-            background: rgba(255, 255, 255, 0.15);
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: left;
             padding: 25px;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            position: relative;
-            overflow: hidden;
-            text-align: left;
             backdrop-filter: blur(15px);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
-        .reference-item:hover {
-            transform: scale(1.08);
-            box-shadow: 0 15px 40px rgba(0, 255, 255, 1);
+        .carousel-item.active {
+            opacity: 1;
         }
-        .reference-item h3 {
+        .carousel h3 {
             color: #0ff;
             margin-bottom: 10px;
             border-bottom: 2px solid rgba(0, 255, 255, 0.5);
             padding-bottom: 5px;
         }
-        .reference-item p {
-            font-size: 1em;
-            line-height: 1.5;
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .carousel-btn {
+            background: rgba(0, 255, 255, 0.3);
+            color: #0ff;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
         }
+        .carousel-btn:hover {
+            background: rgba(0, 255, 255, 0.6);
+        }
+
         .contact-space {
             height: 100px;
         }
@@ -109,35 +122,67 @@
     
     <div class="container">
         <h2>Professional References</h2>
-        <div class="references-grid">
-            <div class="reference-item">
-                <h3>Tyler Edic</h3>
-                <p><strong>Position:</strong> Agile Project Manager</p>
-                <p>"Julia is thorough, consistent, and deeply analytical. She seamlessly integrates agile methodologies into her workflows and has been instrumental in shaping marketing operations strategies."</p>
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <h3>Tyler Edic</h3>
+                    <p><strong>Position:</strong> Agile Project Manager</p>
+                    <p>"Julia is thorough, consistent, and deeply analytical. She seamlessly integrates agile methodologies into her workflows and has been instrumental in shaping marketing operations strategies."</p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Jenn Wilson</h3>
+                    <p><strong>Position:</strong> Digital Marketing Analyst</p>
+                    <p>"Julia’s expertise in RevOps and HubSpot was invaluable to our team. She led critical CRM optimizations that aligned sales and marketing, greatly improving efficiency and data tracking."</p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Nichole Marsano</h3>
+                    <p><strong>Position:</strong> Revenue Marketer</p>
+                    <p>"Julia is a strategic, solutions-oriented leader with deep expertise in HubSpot, marketing, and revenue operations. She builds scalable, efficient workflows and bridges marketing and RevOps, ensuring seamless integration across teams."</p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Jen Sherman</h3>
+                    <p><strong>Position:</strong> Marketing Operations & Strategy</p>
+                    <p>"Julia hit the ground running as a Campaign Manager at Mineral, tackling projects large and small to set up sustainable systems for growth."</p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Stephanie Chatman</h3>
+                    <p><strong>Position:</strong> Marketing Manager & Consultant</p>
+                    <p>"Julia’s ability to interpret marketing analytics and turn them into actionable insights is outstanding. She led efforts at Mineral to unify marketing tools and optimize performance tracking."</p>
+                </div>
             </div>
-            <div class="reference-item">
-                <h3>Jenn Wilson</h3>
-                <p><strong>Position:</strong> Digital Marketing Analyst</p>
-                <p>"Julia’s expertise in RevOps and HubSpot was invaluable to our team. She led critical CRM optimizations that aligned sales and marketing, greatly improving efficiency and data tracking."</p>
-            </div>
-            <div class="reference-item">
-                <h3>Nichole Marsano</h3>
-                <p><strong>Position:</strong> Revenue Marketer</p>
-                <p>"Julia is a strategic, solutions-oriented leader with deep expertise in HubSpot, marketing, and revenue operations. She builds scalable, efficient workflows and bridges marketing and RevOps, ensuring seamless integration across teams."</p>
-            </div>
-            <div class="reference-item">
-                <h3>Jen Sherman</h3>
-                <p><strong>Position:</strong> Marketing Operations & Strategy</p>
-                <p>"Julia hit the ground running as a Campaign Manager at Mineral, tackling projects large and small to set up sustainable systems for growth."</p>
-            </div>
-            <div class="reference-item">
-                <h3>Stephanie Chatman</h3>
-                <p><strong>Position:</strong> Marketing Manager & Consultant</p>
-                <p>"Julia’s ability to interpret marketing analytics and turn them into actionable insights is outstanding. She led efforts at Mineral to unify marketing tools and optimize performance tracking."</p>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="prevSlide()">‹</button>
+                <button class="carousel-btn" onclick="nextSlide()">›</button>
             </div>
         </div>
     </div>
     
     <div class="contact-space"></div>
+
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                item.classList.remove('active');
+                if (i === index) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % items.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showSlide(currentIndex);
+        }
+    </script>
 </body>
 </html>
