@@ -29,15 +29,13 @@
             background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(10, 10, 10, 1) 100%);
             border-bottom: 3px solid #0ff;
         }
-       h2 {
-    display: flex;
-    align-items: center;
-    gap: 3px; /* Ensures consistent spacing between text and button */
-    flex-wrap: nowrap; /* Prevents wrapping */
-    width: fit-content; /* Ensures the heading only takes up as much space as needed */
-}
-
-
+        h2 {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap; /* Prevents wrapping */
+            width: fit-content; /* Ensures the heading only takes up necessary space */
+            margin: 0; /* Prevents weird spacing issues */
+        }
 
         .container {
             width: 80%;
@@ -251,11 +249,9 @@ nav ul li {
     color: #0ff;
     font-size: 1.2em;
     cursor: pointer;
-    margin-left: 1px;
-    white-space: nowrap;
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: left;
+    white-space: nowrap; /* Prevents wrapping */
+    margin-left: 5px; /* Ensures a tiny, even space between text and button */
+    flex-shrink: 0; /* Ensures it never shrinks weirdly */
 }
 
 .toggle-btn:focus {
