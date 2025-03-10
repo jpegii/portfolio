@@ -105,7 +105,19 @@
         tr:hover {
             background: rgba(0, 255, 255, 0.1);
         }
+       
         @media (max-width: 768px) {
+             h2 {
+        display: inline-flex; /* Keeps button next to text */
+        flex-wrap: nowrap;
+        justify-content: flex-start; /* Ensures text + button align properly */
+        width: 100%; /* Ensures it doesn't break layout */
+    }
+
+    .toggle-btn {
+        font-size: 1em; /* Adjusts button size slightly for mobile */
+        margin-left: 5px; /* Keeps spacing minimal */
+    }
             table, thead, tbody, th, td, tr {
                 display: block;
             }
