@@ -107,17 +107,22 @@
         }
        
         @media (max-width: 768px) {
-             h2 {
-        display: inline-flex; /* Keeps button next to text */
-        flex-wrap: nowrap;
-        justify-content: flex-start; /* Ensures text + button align properly */
-        width: 100%; /* Ensures it doesn't break layout */
-    }
+            h2 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Ensures even spacing */
+                flex-wrap: nowrap; /* Prevents wrapping issues */
+                width: 100%; /* Makes sure heading spans full width */
+                padding-right: 10px; /* Prevents text from touching the edge */
+            }
+        
+            .toggle-btn {
+                margin-left: auto; /* Ensures consistent alignment */
+                padding: 0; /* Removes any extra button padding */
+                font-size: 1em; /* Keeps size consistent */
+            }
+        }
 
-    .toggle-btn {
-        font-size: 1em; /* Adjusts button size slightly for mobile */
-        margin-left: 5px; /* Keeps spacing minimal */
-    }
             table, thead, tbody, th, td, tr {
                 display: block;
             }
