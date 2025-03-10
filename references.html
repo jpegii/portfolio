@@ -59,18 +59,19 @@
 
         .carousel-container {
             position: relative;
-            max-width: 600px;
+            max-width: 800px;
             margin: 40px auto;
             overflow: hidden;
         }
 
         .carousel {
             display: flex;
+            flex-direction: column;
             transition: transform 0.5s ease-in-out;
         }
 
         .carousel-item {
-            min-width: 100%;
+            width: 100%;
             box-sizing: border-box;
             text-align: left;
             padding: 25px;
@@ -79,6 +80,7 @@
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
             backdrop-filter: blur(15px);
             display: none;
+            min-height: auto; /* Ensure it expands with content */
         }
 
         .carousel-item.active {
@@ -90,6 +92,11 @@
             margin-bottom: 10px;
             border-bottom: 2px solid rgba(0, 255, 255, 0.5);
             padding-bottom: 5px;
+        }
+
+        .carousel p {
+            white-space: normal; /* Allow text wrapping */
+            overflow: visible;
         }
 
         .carousel-controls {
@@ -130,47 +137,47 @@
                 <div class="carousel-item active">
                     <h3>Tyler Edic</h3>
                     <p>Agile Project Manager - MBA, PSM II, PSPO, CSM | Six Sigma Yellow Belt, 10+ Years in Marketing & Video</p>
-                    <p>"I worked with Julia during her time at School Outfitters, a company with multiple strategic business units, and I was immediately impressed by her ability to digest, collate, and align her actions with the business’ strategic plan..."</p>
+                    <p>"I worked with Julia during her time at School Outfitters, a company with multiple strategic business units, and I was immediately impressed by her ability to digest, collate, and align her actions with the business’ strategic plan... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Jenn Wilson</h3>
                     <p>Digital Marketing Analyst at School Outfitters</p>
-                    <p>"I had the chance to work alongside Julia on the School Outfitters marketing team, and she was such a valuable part of the team..."</p>
+                    <p>"I had the chance to work alongside Julia on the School Outfitters marketing team, and she was such a valuable part of the team... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Nichole Marsano</h3>
                     <p>Revenue Marketer</p>
-                    <p>"Julia is a strategic, solutions-oriented leader with deep expertise in HubSpot, marketing, and revenue operations..."</p>
+                    <p>"Julia is a strategic, solutions-oriented leader with deep expertise in HubSpot, marketing, and revenue operations... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Jen Sherman</h3>
                     <p>Marketing Operations & Strategy</p>
-                    <p>"It was such a pleasure to have Julia join the team at Mineral. Coming on board as Campaign Manager, Julia hit the ground running..."</p>
+                    <p>"It was such a pleasure to have Julia join the team at Mineral... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Stephanie Chatman</h3>
                     <p>Marketing Manager & Consultant</p>
-                    <p>"I enthusiastically recommend Julia for her outstanding leadership, analytical acumen, and marketing operations proficiency..."</p>
+                    <p>"I enthusiastically recommend Julia for her outstanding leadership... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Betsy L. Wolking</h3>
                     <p>Director of Marketing & Communications | President, AMA Cincinnati</p>
-                    <p>"In working with Julia for the past year, I have learned that there is nothing she isn’t willing to tackle!..."</p>
+                    <p>"In working with Julia for the past year, I have learned that there is nothing she isn’t willing to tackle!... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Kari Anderson</h3>
                     <p>Always looking to learn.</p>
-                    <p>"You know a project will be successful with Julia on your team! I had the pleasure of volunteering with Julia for a six-month assignment..."</p>
+                    <p>"You know a project will be successful with Julia on your team!... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Coral Warren</h3>
                     <p>Wife | Mom | Engineer | Business Solutions Expert</p>
-                    <p>"I had the opportunity to work with Julia at Polaris from 2019-2021 and she has become not only a good friend, but a great person to continue sharing..."</p>
+                    <p>"I had the opportunity to work with Julia at Polaris from 2019-2021... (Full reference text here)"</p>
                 </div>
                 <div class="carousel-item">
                     <h3>Alexandra Lloyd</h3>
                     <p>Driving eCommerce Growth | Strategic Leader in Digital Marketing, Customer Experiences & Cross-Functional Collaboration</p>
-                    <p>"Julia joined the technology/communications committee of AMA Birmingham in July 2020 and has been a valued asset..."</p>
+                    <p>"Julia joined the technology/communications committee of AMA Birmingham in July 2020... (Full reference text here)"</p>
                 </div>
             </div>
             
@@ -181,19 +188,13 @@
         </div>
     </div>
     
-    <div class="contact-space"></div>
-
     <script>
         let currentIndex = 0;
         const items = document.querySelectorAll('.carousel-item');
 
         function showSlide(index) {
             items.forEach((item, i) => {
-                if (i === index) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
+                item.classList.toggle('active', i === index);
             });
         }
 
