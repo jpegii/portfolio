@@ -6,7 +6,7 @@
     <title>About Me | Julia Pegis</title>
     <link href="styles.css" rel="stylesheet"> <!-- Link to common CSS file -->
     <style>
-    body {
+        body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
@@ -51,7 +51,7 @@
         }
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             text-align: center;
         }
@@ -82,96 +82,22 @@
             gap: 20px;
             margin-top: 20px;
         }
-   nav {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px 0; /* Increased padding to prevent cutoff */
-    text-align: center;
-    position: relative;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-}
-
-.menu-icon {
-    font-size: 24px;
-    color: #0ff;
-    text-decoration: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-/* Dropdown Menu Styling */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    list-style: none;
-    padding: 10px 0;
-    top: 110%; /* Adjusted to ensure full visibility */
-    left: 50%;
-    transform: translateX(-50%); /* Centers the dropdown */
-    width: 150px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    z-index: 1000; /* Ensures the menu stays above other elements */
-}
-
-.dropdown-menu li {
-    padding: 8px 15px;
-    text-align: center;
-}
-
-.dropdown-menu li a {
-    color: #0ff;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-}
-
-.dropdown-menu li:hover {
-    background: rgba(0, 255, 255, 0.2);
-}
-
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-        .profile-img {
-            width: 250px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
-   <nav>
-    <ul>
-        <li class="dropdown">
-            <a href="#" class="menu-icon">☰</a>
-            <ul class="dropdown-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-<div class="container">
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="menu-icon">☰</a>
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="container">
         <h1>About Julia Pegis</h1>
         <img src="profile.png" alt="Julia Pegis" class="profile-img">
         
@@ -188,28 +114,17 @@ nav ul li {
                 <div class="skills-item"><strong>MarTech Infrastructure & Optimization</strong><br>Managing and integrating HubSpot, Marketo, Salesforce, and data enrichment tools to enhance performance visibility and operational efficiency.</div>
                 <div class="skills-item"><strong>Custom Reporting & Analytics</strong><br>Building core marketing dashboards and KPI frameworks to improve decision-making and demonstrate ROI.</div>
                 <div class="skills-item"><strong>Process Automation & AI Integration</strong><br>Identifying automation opportunities and AI-driven optimizations to remove friction, improve scalability, and enhance personalization.</div>
-                   </div>
-                <div class="skills-item">Marketing Automation (HubSpot, Marketo)</div>
-                <div class="skills-item">RevOps & CRM Optimization (Salesforce, HubSpot CRM)</div>
-                <div class="skills-item">AI & Martech Innovation (AI-driven marketing strategies)</div>
-                <div class="skills-item">Data Analytics & Reporting (SQL, Python, Tableau, LookerStudio)</div>
-                <div class="skills-item">Campaign Execution & Performance Tracking</div>
             </div>
             
             <h2>Personal Insights</h2>
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide">I thrive at the intersection of strategy, technology, and data, helping businesses remove inefficiencies and maximize marketing impact.</div>
-                    <div class="slide">With experience spanning SaaS, logistics, and consumer brands, I bring a unique perspective to marketing operations and revenue alignment.</div>
-                    <div class="slide">Beyond work, I’m a marathon runner, rock climber, and an AI enthusiast. I find parallels between optimizing marketing funnels and strategizing for endurance sports.</div>
-                    <div class="slide">Passionate about process automation, I’ve built custom Python scripts, developed localized LLMs, and led CRM migrations to optimize workflows and save valuable hours.</div>
-                    <div class="slide">I believe that great marketing is equal parts strategy, data intelligence, and seamless execution—and I love working at the intersection of all three.</div>
-                </div>
-            </div>
+            <p>Marketing isn’t just about execution—it’s about building smarter, scalable, and more efficient systems that drive measurable impact. I’ve worked across diverse industries, from high-growth SaaS to logistics and consumer brands, always with a focus on leveraging technology to enhance performance.</p>
+            <p>I’m passionate about automation and AI-driven marketing solutions. From **developing custom Python scripts for data processing** to **building localized LLMs and optimizing CRM workflows**, I love finding ways to reduce friction and improve scalability.</p>
+            <p>Beyond work, I’m an **endurance athlete**, a **marathon runner**, and a **rock climber**—I thrive in challenging environments that require **strategy, persistence, and continuous optimization**. I see a lot of parallels between tackling a marathon and solving marketing ops challenges: both require precision, adaptability, and a deep understanding of systems.</p>
             
             <h2>Contact & Social Links</h2>
             <div class="contact-info">
                 <a href="https://www.linkedin.com/in/juliamariepegis/" target="_blank">📍 LinkedIn</a>
+                <a href="#">💻 GitHub</a>
                 <a href="#">📩 Email</a>
             </div>
         </div>
