@@ -59,84 +59,89 @@
             border-radius: 10px;
         }
 
-        .table-container {
+       .table-container {
     overflow-x: auto;
     position: relative;
     padding-bottom: 10px;
+    max-width: 100%;
 }
 
-    .table-container::after {
-        content: "Tap to expand table";
+.table-container::after {
+    content: "← Swipe to see more →";
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0, 255, 255, 0.7);
+    margin-top: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    display: table;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+th {
+    background: rgba(0, 255, 255, 0.3);
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 1);
+    color: #0ff;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* Mobile-specific table styling */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: initial;
+    }
+    table, thead, tbody, th, td, tr {
         display: block;
-        text-align: center;
-        font-size: 14px;
-        color: rgba(0, 255, 255, 0.7);
-        margin-top: 5px;
     }
-    
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background: rgba(255, 255, 255, 0.2);
+    thead {
+        display: none;
+    }
+    tr {
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        margin-bottom: 10px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
     }
-    
-    th, td {
-        padding: 15px;
-        text-align: left;
+    td {
         border-bottom: 1px solid rgba(0, 255, 255, 0.3);
-        font-size: 16px;
+        position: relative;
+        padding-left: 50%;
+        display: flex;
+        justify-content: space-between;
         white-space: normal;
     }
-    
-    th {
-        background: rgba(0, 255, 255, 0.3);
-        text-transform: uppercase;
-        text-shadow: 0 0 5px rgba(0, 255, 255, 1);
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
         color: #0ff;
     }
-    
-    tr:last-child td {
-        border-bottom: none;
-    }
-    
-    tr:hover {
-        background: rgba(0, 255, 255, 0.1);
-    }
-    
-    /* Mobile-specific table styling */
-    @media (max-width: 768px) {
-        table, thead, tbody, th, td, tr {
-            display: block;
-        }
-        thead {
-            display: none;
-        }
-        tr {
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            margin-bottom: 10px;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-        td {
-            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
-            position: relative;
-            padding-left: 50%;
-            display: flex;
-            justify-content: space-between;
-        }
-        td::before {
-            content: attr(data-label);
-            position: absolute;
-            left: 10px;
-            font-weight: bold;
-            color: #0ff;
-        }
-    }
-
-
+}
+        
         .memberships {
             background: rgba(255, 255, 255, 0.1);
             padding: 25px;
@@ -240,65 +245,36 @@ a:hover {
             </ul>
         </section>
         
-           <section class="section">
+          <section class="section">
             <h2>Certifications</h2>
-            <table>
-                <tr>
-                    <th>Certification</th>
-                    <th>Provider</th>
-                    <th>Skills</th>
-                </tr>
-                <tr>
-                    <td>Adobe Certified Professional - Marketo Engage</td>
-                    <td>Adobe</td>
-                    <td>Marketo, Digital Marketing, Lead Scoring, Nurture Campaigns, Marketing Automation</td>
-                </tr>
-                <tr>
-                    <td>HubSpot Marketing Software</td>
-                    <td>HubSpot</td>
-                    <td>HubSpot, Marketing Automation, Workflows, CRM, Email Marketing</td>
-                </tr>
-                <tr>
-                    <td>Professional Scrum Product Owner I</td>
-                    <td>Scrum.org</td>
-                    <td>Agile Methodologies, Scrum, Product Ownership</td>
-                </tr>
-                <tr>
-                    <td>HubSpot Sales Software</td>
-                    <td>HubSpot</td>
-                    <td>Marketing Operations, Sales Operations</td>
-                </tr>
-                <tr>
-                    <td>ABM Certification: Advanced Course</td>
-                    <td>Demandbase</td>
-                    <td>Account-Based Marketing (ABM), Sales Alignment</td>
-                </tr>
-                <tr>
-                    <td>HubSpot Email Marketing Certification</td>
-                    <td>HubSpot</td>
-                    <td>HubSpot, Email Marketing, Email Strategy</td>
-                </tr>
-                <tr>
-                    <td>Excel Basics for Data Analysis</td>
-                    <td>IBM</td>
-                    <td>Data Analytics, Microsoft Excel, Strategic Data Analysis</td>
-                </tr>
-                <tr>
-                    <td>Introduction to Data Analytics</td>
-                    <td>IBM</td>
-                    <td>Data Analytics, Business Intelligence, Reporting</td>
-                </tr>
-                <tr>
-                    <td>SEO Specialist Qualification</td>
-                    <td>ClickMinded</td>
-                    <td>Organic Search, Search Engine Optimization (SEO)</td>
-                </tr>
-                <tr>
-                    <td>Conversion Funnel Certification</td>
-                    <td>ClickMinded</td>
-                    <td>Conversion Rate Optimization, Digital Marketing</td>
-                </tr>
-            </table>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Certification</th>
+                            <th>Provider</th>
+                            <th>Skills</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Certification">Adobe Certified Professional - Marketo Engage</td>
+                            <td data-label="Provider">Adobe</td>
+                            <td data-label="Skills">Marketo, Digital Marketing, Lead Scoring, Nurture Campaigns, Marketing Automation</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Certification">HubSpot Marketing Software</td>
+                            <td data-label="Provider">HubSpot</td>
+                            <td data-label="Skills">HubSpot, Marketing Automation, Workflows, CRM, Email Marketing</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Certification">Professional Scrum Product Owner I</td>
+                            <td data-label="Provider">Scrum.org</td>
+                            <td data-label="Skills">Agile Methodologies, Scrum, Product Ownership</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
         
         <section class="section">
