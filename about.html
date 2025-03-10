@@ -6,7 +6,7 @@
     <title>About Me | Julia Pegis</title>
     <link href="styles.css" rel="stylesheet"> <!-- Link to common CSS file -->
     <style>
-        body {
+       body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
@@ -30,6 +30,50 @@
             letter-spacing: 2px;
             color: #0ff;
             text-shadow: 0 0 15px rgba(0, 255, 255, 1);
+        }
+        .profile-img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            margin-top: 20px;
+        }
+        .content {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+        .skills-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            margin-top: 20px;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
         }
    nav {
     background: rgba(255, 255, 255, 0.1);
@@ -120,13 +164,39 @@ nav ul li {
         </li>
     </ul>
 </nav>
-
-    
-    <div class="container">
+ <div class="container">
         <h1>About Julia Pegis</h1>
         <img src="profile.png" alt="Julia Pegis" class="profile-img">
-        <p>Welcome to the about page! Here you can learn more about my background, experience, and expertise in marketing operations, revenue operations, and AI-driven martech solutions.</p>
-        <p>I specialize in CRM optimization, campaign execution, and data-driven strategies that align marketing and sales for business growth.</p>
+        
+        <div class="content">
+            <h2>Professional Summary</h2>
+            <p>Strategic marketing leader with expertise in marketing operations, lifecycle strategy, campaign management, and AI-driven innovation. Skilled in leveraging martech tools to enhance workflows, optimize data accuracy, and drive measurable growth.</p>
+            
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skills-item">Marketing Automation (HubSpot, Marketo)</div>
+                <div class="skills-item">RevOps & CRM Optimization (Salesforce, HubSpot CRM)</div>
+                <div class="skills-item">AI & Martech Innovation (AI-driven marketing strategies)</div>
+                <div class="skills-item">Data Analytics & Reporting (SQL, Python, Tableau, LookerStudio)</div>
+                <div class="skills-item">Campaign Execution & Performance Tracking</div>
+            </div>
+            
+            <h2>Personal Insights</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">I thrive at the intersection of strategy, technology, and data, helping businesses remove inefficiencies and maximize marketing impact.</div>
+                    <div class="slide">Having worked across high-growth SaaS companies, logistics, and consumer-driven brands, I bring a broad perspective on scaling operations across industries.</div>
+                    <div class="slide">Beyond work, I’m a marathon runner, rock climber, and an analytics enthusiast. I love solving complex problems—whether optimizing marketing funnels or strategizing for a race.</div>
+                </div>
+            </div>
+            
+            <h2>Contact & Social Links</h2>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/juliamariepegis/" target="_blank">📍 LinkedIn</a>
+                <a href="#">💻 GitHub</a>
+                <a href="#">📩 Email</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
