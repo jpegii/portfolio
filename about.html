@@ -31,10 +31,12 @@
             color: #0ff;
             text-shadow: 0 0 15px rgba(0, 255, 255, 1);
         }
-     nav {
+   nav {
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    padding: 20px 0; /* Increased padding to prevent cutoff */
     text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 
 nav ul {
@@ -56,6 +58,11 @@ nav ul li {
     cursor: pointer;
 }
 
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -63,15 +70,17 @@ nav ul li {
     border-radius: 10px;
     list-style: none;
     padding: 10px 0;
-    top: 100%;
-    left: 0;
-    width: 120px;
+    top: 110%; /* Adjusted to ensure full visibility */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the dropdown */
+    width: 150px;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    z-index: 1000; /* Ensures the menu stays above other elements */
 }
 
 .dropdown-menu li {
     padding: 8px 15px;
-    text-align: left;
+    text-align: center;
 }
 
 .dropdown-menu li a {
@@ -85,7 +94,7 @@ nav ul li {
     background: rgba(0, 255, 255, 0.2);
 }
 
-/* Show Dropdown on Click */
+/* Show Dropdown on Hover */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
