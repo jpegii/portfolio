@@ -23,7 +23,20 @@
             border-radius: 15px;
             box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
             margin-top: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .profile-img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            margin-right: 20px;
+        }
+        .content {
+            flex: 1;
         }
         h1, h2 {
             text-transform: uppercase;
@@ -38,22 +51,11 @@
         a:visited, a:hover {
             color: #0ff;
         }
-        .profile-img {
-            width: 250px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            margin-top: 20px;
-        }
-        .content {
-            text-align: left;
-            margin-top: 20px;
-        }
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            text-align: center;
+            text-align: left;
         }
         .skills-item {
             background: rgba(255, 255, 255, 0.2);
@@ -61,20 +63,12 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
         }
-        .slider-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
+        .personal-insights {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
             margin-top: 20px;
-        }
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .slide {
-            min-width: 100%;
-            text-align: center;
         }
         .contact-info {
             display: flex;
@@ -98,35 +92,42 @@
     </nav>
     
     <div class="container">
-        <h1>About Julia Pegis</h1>
         <img src="profile.png" alt="Julia Pegis" class="profile-img">
-        
         <div class="content">
+            <h1>About Julia Pegis</h1>
             <h2>Professional Summary</h2>
             <p>I turn marketing operations into a competitive advantage by optimizing systems, improving data intelligence, and aligning strategy with revenue growth.</p>
             <p>With expertise across B2B SaaS, logistics, and B2C industries, I specialize in building scalable marketing operations, refining attribution models, and leveraging automation to accelerate performance. My experience spans both in-house leadership and agency consulting, giving me a unique ability to drive efficiency while aligning marketing, sales, and customer experience teams.</p>
-            
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
             <h2>Skills & Expertise</h2>
             <div class="skills-grid">
-                <div class="skills-item"><strong>Marketing Operations Strategy</strong><br>Transforming marketing operations into a revenue-driving function by streamlining workflows, automating processes, and aligning cross-functional teams.</div>
-                <div class="skills-item"><strong>Lifecycle & Campaign Automation</strong><br>Developing multi-channel marketing programs across email and paid media to drive engagement, retention, and conversion.</div>
-                <div class="skills-item"><strong>Lead Management & Attribution</strong><br>Designing data-driven lead management frameworks that improve routing, optimize engagement scoring, and enhance marketing-to-sales alignment.</div>
-                <div class="skills-item"><strong>MarTech Infrastructure & Optimization</strong><br>Managing and integrating HubSpot, Marketo, Salesforce, and data enrichment tools to enhance performance visibility and operational efficiency.</div>
-                <div class="skills-item"><strong>Custom Reporting & Analytics</strong><br>Building core marketing dashboards and KPI frameworks to improve decision-making and demonstrate ROI.</div>
-                <div class="skills-item"><strong>Process Automation & AI Integration</strong><br>Identifying automation opportunities and AI-driven optimizations to remove friction, improve scalability, and enhance personalization.</div>
+                <div class="skills-item"><strong>Marketing Operations Strategy</strong><br>Optimizing workflows, automating processes, and aligning cross-functional teams.</div>
+                <div class="skills-item"><strong>Lifecycle & Campaign Automation</strong><br>Developing multi-channel programs to drive engagement and retention.</div>
+                <div class="skills-item"><strong>Lead Management & Attribution</strong><br>Designing frameworks that improve routing, scoring, and marketing-sales alignment.</div>
+                <div class="skills-item"><strong>MarTech Infrastructure & Optimization</strong><br>Managing and integrating HubSpot, Marketo, Salesforce, and other tools.</div>
+                <div class="skills-item"><strong>Custom Reporting & Analytics</strong><br>Building KPI dashboards and frameworks for decision-making and ROI tracking.</div>
+                <div class="skills-item"><strong>Process Automation & AI Integration</strong><br>Leveraging AI to enhance scalability, efficiency, and personalization.</div>
             </div>
-            
-            <h2>Personal Insights</h2>
-            <p>Marketing isn’t just about execution—it’s about building smarter, scalable, and more efficient systems that drive measurable impact. I’ve worked across diverse industries, from high-growth SaaS to logistics and consumer brands, always with a focus on leveraging technology to enhance performance.</p>
-            <p>I’m passionate about automation and AI-driven marketing solutions. From **developing custom Python scripts for data processing** to **building localized LLMs and optimizing CRM workflows**, I love finding ways to reduce friction and improve scalability.</p>
-            <p>Beyond work, I’m an **endurance athlete**, a **marathon runner**, and a **rock climber**—I thrive in challenging environments that require **strategy, persistence, and continuous optimization**. I see a lot of parallels between tackling a marathon and solving marketing ops challenges: both require precision, adaptability, and a deep understanding of systems.</p>
-            
-            <h2>Contact & Social Links</h2>
-            <div class="contact-info">
-                <a href="https://www.linkedin.com/in/juliamariepegis/" target="_blank">📍 LinkedIn</a>
-                <a href="#">💻 GitHub</a>
-                <a href="#">📩 Email</a>
-            </div>
+        </div>
+    </div>
+    
+    <div class="container personal-insights">
+        <h2>Personal Insights</h2>
+        <p>Marketing isn’t just about execution—it’s about building scalable, efficient systems that drive measurable impact. I’ve worked across SaaS, logistics, and consumer brands, always focusing on leveraging technology to enhance performance.</p>
+        <p>I’m passionate about automation and AI-driven marketing solutions. From developing custom Python scripts for data processing to building localized LLMs and optimizing CRM workflows, I love finding ways to reduce friction and improve scalability.</p>
+        <p>Beyond work, I’m an endurance athlete, a marathon runner, and a rock climber—I thrive in challenging environments that require strategy, persistence, and continuous optimization. Whether tackling a marathon or refining a marketing funnel, I see problem-solving as an iterative process that requires precision, adaptability, and deep system understanding.</p>
+    </div>
+    
+    <div class="container">
+        <h2>Contact & Social Links</h2>
+        <div class="contact-info">
+            <a href="https://www.linkedin.com/in/juliamariepegis/" target="_blank">📍 LinkedIn</a>
+            <a href="#">💻 GitHub</a>
+            <a href="#">📩 Email</a>
         </div>
     </div>
 </body>
