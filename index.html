@@ -57,6 +57,32 @@
             padding: 20px;
             border-radius: 10px;
         }
+
+                table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+        th {
+            background: rgba(0, 255, 255, 0.3);
+            text-transform: uppercase;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 1);
+            color: #0ff;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background: rgba(0, 255, 255, 0.1);
+        }
         .memberships {
             background: rgba(255, 255, 255, 0.1);
             padding: 25px;
