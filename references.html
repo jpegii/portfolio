@@ -6,7 +6,7 @@
     <title>References | Julia Pegis</title>
     <link href="styles.css" rel="stylesheet"> <!-- Link to common CSS file -->
     <style>
-  body {
+        body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
@@ -46,11 +46,11 @@
             color: #0ff;
             text-shadow: 0 0 15px rgba(0, 255, 255, 1);
         }
-       . .references-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .references-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
-            text-align: left;
             padding: 20px;
         }
         .reference-item {
@@ -59,65 +59,29 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
             transition: transform 0.3s ease-in-out;
+            width: 300px;
+            text-align: left;
+            position: relative;
         }
         .reference-item:hover {
             transform: scale(1.05);
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-}
-
-.menu-icon {
-    font-size: 24px;
-    color: #0ff;
-    text-decoration: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    list-style: none;
-    padding: 10px 0;
-    top: 100%;
-    left: 0;
-    width: 120px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-.dropdown-menu li {
-    padding: 8px 15px;
-    text-align: left;
-}
-
-.dropdown-menu li a {
-    color: #0ff;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-}
-
-.dropdown-menu li:hover {
-    background: rgba(0, 255, 255, 0.2);
-}
-
-/* Show Dropdown on Click */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+        }
+        .reference-item::before {
+            content: '★';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5em;
+            color: #0ff;
+        }
+        .contact-space {
+            height: 80px;
+        }
     </style>
 </head>
 <body>
+    <div class="banner">References</div>
+    
     <nav>
         <ul>
             <li class="dropdown">
@@ -130,8 +94,6 @@ nav ul li {
             </li>
         </ul>
     </nav>
-    <div class="banner">References</div>
-    
     
     <div class="container">
         <h2>Professional References</h2>
@@ -163,6 +125,7 @@ nav ul li {
             </div>
         </div>
     </div>
+    
     <div class="contact-space"></div>
 </body>
 </html>
