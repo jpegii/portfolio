@@ -241,9 +241,13 @@ nav ul li {
     color: #0ff;
     font-size: 1.2em;
     cursor: pointer;
+    margin-left: 10px;
     white-space: nowrap;
-    flex-shrink: 0; /* Prevents the button from wrapping */
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
 }
+
 .toggle-btn:focus {
     outline: none;
 }
