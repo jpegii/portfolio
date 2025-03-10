@@ -31,24 +31,65 @@
             color: #0ff;
             text-shadow: 0 0 15px rgba(0, 255, 255, 1);
         }
-        nav {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #0ff;
-            text-decoration: none;
-            font-size: 18px;
-        }
+     nav {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #0ff;
+    text-decoration: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    list-style: none;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    width: 120px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+/* Show Dropdown on Click */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
         .profile-img {
             width: 250px;
             height: auto;
@@ -59,14 +100,18 @@
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+   <nav>
+    <ul>
+        <li class="dropdown">
+            <a href="#" class="menu-icon">☰</a>
+            <ul class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
     
     <div class="container">
         <h1>About Julia Pegis</h1>
