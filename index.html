@@ -229,6 +229,22 @@ nav ul li {
     display: block;
 }
 
+.collapsible-content {
+    display: none;
+    padding-top: 10px;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #0ff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.toggle-btn:focus {
+    outline: none;
+}
 
         
     </style>
@@ -258,8 +274,12 @@ nav ul li {
         </header>
         
         <section class="section">
-            <h2>About Me</h2>
-            <p>Data-driven marketing operations leader specializing in CRM optimization, campaign execution, revenue operations, and AI-driven martech innovation. Proven track record of improving lead management, automation, and analytics to enhance marketing effectiveness and sales alignment.</p>
+           <h2 onclick="toggleSection('aboutMe')">
+    About Me <button class="toggle-btn">+</button>
+</h2>
+<div id="aboutMe" class="collapsible-content">
+    <p>Data-driven marketing operations leader specializing in CRM optimization, campaign execution, revenue operations, and AI-driven martech innovation.</p>
+</div>
         </section>
         
         <section class="section">
@@ -404,5 +424,20 @@ nav ul li {
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+    <script>
+    function toggleSection(id) {
+        var section = document.getElementById(id);
+        var button = section.previousElementSibling.querySelector(".toggle-btn");
+        
+        if (section.style.display === "none" || section.style.display === "") {
+            section.style.display = "block";
+            button.textContent = "−";
+        } else {
+            section.style.display = "none";
+            button.textContent = "+";
+        }
+    }
+</script>
+
 </body>
 </html>
