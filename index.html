@@ -323,20 +323,25 @@ nav ul li {
 
         </section>
         
-        <section class="section">
-            <h2>Tools & Technologies</h2>
-            <p>Adobe Suite, LinkedIn Ads, Meta Ads, Canva, Wordpress, Mailchimp, Google Ads, Google Analytics, Salesforce, Marketo, HubSpot, PowerBI, SQL, Python, Tableau, LookerStudio, Unbounce, Terminus</p>
-        </section>
-        
-       <section class="section memberships">
-            <h2>Memberships & Leadership</h2>
-            <ul class="membership-list">
-                <li>VP Marketing and Communications: AMA Cincinnati Chapter (Current)</li>
-                <li>Together Digital Member (Current)</li>
-                <li>Founding Board Member: Women in Manufacturing Alabama (2021)</li>
-                <li>Director of Communications: AMA Birmingham Chapter (2020-2021)</li>
-            </ul>
-        </section>
+<section class="section">
+    <h2 onclick="toggleSection('toolsTechnologies')">Tools & Technologies <button class="toggle-btn">+</button></h2>
+    <div id="toolsTechnologies" class="collapsible-content">
+        <p>Adobe Suite, LinkedIn Ads, Meta Ads, Canva, Wordpress, Mailchimp, Google Ads, Google Analytics, Salesforce, Marketo, HubSpot, PowerBI, SQL, Python, Tableau, LookerStudio, Unbounce, Terminus</p>
+    </div>
+</section>
+
+<section class="section memberships">
+    <h2 onclick="toggleSection('memberships')">Memberships & Leadership <button class="toggle-btn">+</button></h2>
+    <div id="memberships" class="collapsible-content">
+        <ul class="membership-list">
+            <li>VP Marketing and Communications: AMA Cincinnati Chapter (Current)</li>
+            <li>Together Digital Member (Current)</li>
+            <li>Founding Board Member: Women in Manufacturing Alabama (2021)</li>
+            <li>Director of Communications: AMA Birmingham Chapter (2020-2021)</li>
+        </ul>
+    </div>
+</section>
+
         
          <section class="section">
     <h2 onclick="toggleSection('certifications')">Certifications <button class="toggle-btn">+</button></h2>
