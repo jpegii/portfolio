@@ -124,9 +124,82 @@
         .contact-space {
             height: 100px;
         }
+        nav {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #0ff;
+    text-decoration: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    list-style: none;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    width: 120px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+/* Show Dropdown on Click */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
     </style>
 </head>
 <body>
+   <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="menu-icon">☰</a>
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
     <div class="banner">References</div>
     
     <div class="container">
@@ -177,7 +250,7 @@ I wholeheartedly endorse Julia for roles in campaign management or marketing ope
                 </div>
                 <div class="carousel-item">
                     <h3>Kari Anderson</h3>
-                    <p>Always looking to learn.</p>
+                    <p>Marketing Services Representattive</p>
                     <p>"You know a project will be successful with Julia on your team! I had the pleasure of volunteering with Julia for a six-month assignment on behalf of AMA Cincinnati’s nonprofit marketing agency: AMA Agency. To support a local nonprofit organization, the Greenlight Fund, we focused on their social media activities and how to spread awareness of their efforts throughout Greater Cincinnati. An initial step to this was creating a content calendar, which Julia’s strategic thinking was critical to. She thought about how each touchpoint would affect others down the line and how they can all be connected for an effective message. When it came to the execution and communication of our strategy, Julia proved herself to be a capable leader. She always came to meetings prepared and ready to contribute with a can-do attitude. As a team member or leader, Julia earns my highest recommendation."</p>
                 </div>
                 <div class="carousel-item">
