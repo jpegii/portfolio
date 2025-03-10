@@ -39,6 +39,7 @@
             box-shadow: 0 0 50px rgba(0, 255, 255, 0.9);
             margin-top: 30px;
             text-align: center;
+            position: relative;
         }
         h1, h2 {
             text-transform: uppercase;
@@ -68,10 +69,12 @@
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
             backdrop-filter: blur(15px);
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
         .carousel-item.active {
             opacity: 1;
+            transform: translateY(0);
         }
         .carousel h3 {
             color: #0ff;
