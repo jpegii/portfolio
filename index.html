@@ -127,6 +127,29 @@ tr:hover {
     background: rgba(0, 255, 255, 0.1);
 }
 
+/* Ensure LinkedIn link remains readable and doesn't turn purple */
+.linkedin-link {
+    color: #0ff !important;  /* Force bright cyan */
+    text-decoration: none;   /* Remove underline */
+}
+
+/* Prevent visited LinkedIn link from turning purple */
+.linkedin-link:visited {
+    color: #0ff !important;
+}
+
+/* Slight color change on hover */
+.linkedin-link:hover {
+    color: #00e6e6;
+    text-decoration: underline; /* Optional hover effect */
+}
+
+/* Slight color change when clicked */
+.linkedin-link:active {
+    color: #00cccc;
+}
+
+        
 /* Responsive styles */
 @media (max-width: 768px) {
     h2 {
